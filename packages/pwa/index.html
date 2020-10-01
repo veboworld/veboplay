@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="uviewport" content="width=device-width">
+        <link rel="manifest" href="manifest.json?v=">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Vebo">
+        <meta name="apple-mobile-web-app-title" content="Vebo">
+        <meta name="msapplication-starturl" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>DEV</title>
+        <link href="https://unpkg.com/tailwindcss/dist/tailwind.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Montserrat&family=Space+Mono&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <script src="https://unpkg.com/eruda"></script>
+        <script>eruda.init();</script>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div class="pg-app">
+            <div class="pg-nav">
+                <div class="flex h-full">
+                    <div class="m-auto">
+                        Menu hhhh
+                    </div>
+                </div>
+            </div>
+            <div class="pg-previosly-container"></div>
+            <div class="pg-container">
+                <div class="pg-nav-h inline mr-4 mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#000" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="15" y1="4" x2="30" y2="4"/>
+                        <line x1="9" y1="14" x2="30" y2="14"/>
+                        <line x1="3" y1="24" x2="30" y2="24"/>
+                    </svg>
+                </div>
+                <div class="flex justify-center w-full h-12 mt-2">
+                    <img src="logo.png" class="h-full">
+                </div>
+                <section class="text-gray-900 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                        <h2 class="text-2xl my-4 border-b border-gray-600"> مسلسلات ليوم </h2>
+                        <div class="pg-posts flex flex-wrap -m-4" stylye="flex-flow row wrap;">
+                        </div>
+                    </div>
+                </section>
+                <footer class="text-gray-700 body-font">
+                    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+                        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" class="w-10 h-10 text-white" viewBox="0 0 185.04 133.4">
+                                <defs>
+                                    <style>.cls-1{fill:url(#linear-gradient);}</style>
+                                    <linearGradient id="linear-gradient" y1="66.7" x2="185.04" y2="66.7" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#90cea1"/>
+                                        <stop offset="0.56" stop-color="#3cbec9"/>
+                                        <stop offset="1" stop-color="#00b3e5"/>
+                                    </linearGradient>
+                                </defs>
+                                <path class="cls-1" d="M51.06,66.7h0A17.67,17.67,0,0,1,68.73,49h-.1A17.67,17.67,0,0,1,86.3,66.7h0A17.67,17.67,0,0,1,68.63,84.37h.1A17.67,17.67,0,0,1,51.06,66.7Zm82.67-31.33h32.9A17.67,17.67,0,0,0,184.3,17.7h0A17.67,17.67,0,0,0,166.63,0h-32.9A17.67,17.67,0,0,0,116.06,17.7h0A17.67,17.67,0,0,0,133.73,35.37Zm-113,98h63.9A17.67,17.67,0,0,0,102.3,115.7h0A17.67,17.67,0,0,0,84.63,98H20.73A17.67,17.67,0,0,0,3.06,115.7h0A17.67,17.67,0,0,0,20.73,133.37Zm83.92-49h6.25L125.5,49h-8.35l-8.9,23.2h-.1L99.4,49H90.5Zm32.45,0h7.8V49h-7.8Zm22.2,0h24.95V77.2H167.1V70h15.35V62.8H167.1V56.2h16.25V49h-24ZM10.1,35.4h7.8V6.9H28V0H0V6.9H10.1ZM39,35.4h7.8V20.1H61.9V35.4h7.8V0H61.9V13.2H46.75V0H39Zm41.25,0h25V28.2H88V21h15.35V13.8H88V7.2h16.25V0h-24Zm-79,49H9V57.25h.1l9,27.15H24l9.3-27.15h.1V84.4h7.8V49H29.45l-8.2,23.1h-.1L13,49H1.2Zm112.09,49H126a24.59,24.59,0,0,0,7.56-1.15,19.52,19.52,0,0,0,6.35-3.37,16.37,16.37,0,0,0,4.37-5.5A16.91,16.91,0,0,0,146,115.8a18.5,18.5,0,0,0-1.68-8.25,15.1,15.1,0,0,0-4.52-5.53A18.55,18.55,0,0,0,133.07,99,33.54,33.54,0,0,0,125,98H113.29Zm7.81-28.2h4.6a17.43,17.43,0,0,1,4.67.62,11.68,11.68,0,0,1,3.88,1.88,9,9,0,0,1,2.62,3.18,9.87,9.87,0,0,1,1,4.52,11.92,11.92,0,0,1-1,5.08,8.69,8.69,0,0,1-2.67,3.34,10.87,10.87,0,0,1-4,1.83,21.57,21.57,0,0,1-5,.55H121.1Zm36.14,28.2h14.5a23.11,23.11,0,0,0,4.73-.5,13.38,13.38,0,0,0,4.27-1.65,9.42,9.42,0,0,0,3.1-3,8.52,8.52,0,0,0,1.2-4.68,9.16,9.16,0,0,0-.55-3.2,7.79,7.79,0,0,0-1.57-2.62,8.38,8.38,0,0,0-2.45-1.85,10,10,0,0,0-3.18-1v-.1a9.28,9.28,0,0,0,4.43-2.82,7.42,7.42,0,0,0,1.67-5,8.34,8.34,0,0,0-1.15-4.65,7.88,7.88,0,0,0-3-2.73,12.9,12.9,0,0,0-4.17-1.3,34.42,34.42,0,0,0-4.63-.32h-13.2Zm7.8-28.8h5.3a10.79,10.79,0,0,1,1.85.17,5.77,5.77,0,0,1,1.7.58,3.33,3.33,0,0,1,1.23,1.13,3.22,3.22,0,0,1,.47,1.82,3.63,3.63,0,0,1-.42,1.8,3.34,3.34,0,0,1-1.13,1.2,4.78,4.78,0,0,1-1.57.65,8.16,8.16,0,0,1-1.78.2H165Zm0,14.15h5.9a15.12,15.12,0,0,1,2.05.15,7.83,7.83,0,0,1,2,.55,4,4,0,0,1,1.58,1.17,3.13,3.13,0,0,1,.62,2,3.71,3.71,0,0,1-.47,1.95,4,4,0,0,1-1.23,1.3,4.78,4.78,0,0,1-1.67.7,8.91,8.91,0,0,1-1.83.2h-7Z"></path>
+                            </svg>
+                            <span class="mr-3 text-xl">مصدر المعلومات متعنا</span>
+                        </a>
+                        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 شفما ليوم؟ —
+                            <a href="https://github.com/fwdmo" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@fwdmo</a>
+                        </p>
+                        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                            <a class="text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500">
+                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <noscript>
+        <div class="row column header" id="app">
+            <h1 class="cover-heading">Live Search Test</h1>
+            <div class="medium-6 medium-offset-3 ctrl">
+                <form class="searchForm" v-on:submit.prevent="submitSearch">
+                    <input type="text" v-model="query" @change="submitSearch" placeholder="Type here" @keyhup="submitSearch">
+                    <span vh-show="query" class="removeInput" @click="removeSearchQuery">+</span>
+                </form>
+            </div>
+            <div class="searchResult" v-show="result.length">
+                <a :href="item.url" v-for="item in result">
+                    <div class="medium-8 medium-offset-2 columns card">
+                        <h1 class="text-headline">{{ item.title }}</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </noscript>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="scripts.js.php"></script>
+        <script>
+            var task = new Worker('task.js');
+            task.onmessage = function(e) {
+              console.log('Message received from worker', e.data);
+            }
+            
+            Vue.filter('htmlEscape', function(value) {
+              return value.replace(/\&amp\;/g, '&');
+            });
+            Vue.filter('dateTime', function(val) {
+              return new Date(val).toGMTString().slice(0, -13);
+            });
+            
+            var vm = new Vue({
+              el: '#app',
+              data: {
+                result: [],
+                query: '',
+              },
+              computed: {
+            
+              },
+              ready: function() {
+              },
+              methods: {
+                removeSearchQuery: function() {
+                  this.searchQuery = '';
+                  this.isResult = false;
+                },
+                submitSearch: function() {
+                  if(this.query.length > 2) {
+                    fetch('http://localhost:5005/?q=' + this.query)
+                    .then(res => res.json())
+                    .then(res => {
+                      this.result = res.data;
+                      task.postMessage(res.data);
+                    })
+                  }
+                }
+              }
+            });
+              
+        </script>
+    </body>
+</html>

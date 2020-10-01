@@ -1,0 +1,32 @@
+image:
+  file: Dockerfile.gitpod
+  context: .
+tasks:
+  - init: yarn install && yarn run build
+ports:
+    - port: 3000
+      onOpen: ignore
+github:
+  prebuilds:
+    # enable for the master/default branch (defaults to true)
+    master: true
+# enable for all branches in this repo (defaults to false)
+    branches: true
+# enable for pull requests coming from this repo (defaults to true)
+    pullRequests: true
+# enable for pull requests coming from forks (defaults to false)
+    pullRequestsFromForks: true
+# add a "Review in Gitpod" button as a comment to pull requests (defaults to true)
+    addComment: true
+# add a "Review in Gitpod" button to pull requests (defaults to false)
+    addBadge: false
+# add a label once the prebuild is ready to pull requests (defaults to false)
+    addLabel: prebuilt-in-gitpod
+vscode:
+  extensions:
+    - octref.vetur@0.23.0:TEzauMObB6f3i2JqlvrOpA==
+    - esbenp.prettier-vscode@5.7.1:GDba64T6G+TUi1qmc6BE3A==
+    - syler.sass-indented@1.8.11:ct8RQj0VKMLMB3AxMffWhg==
+    - anseki.vscode-color@0.4.5:6L3EhKJFHuizA7wqZz6/+g==
+    - dracula-theme.theme-dracula@2.22.1:acEEGtphPo3sp9+wXQiSyw==
+    - PKief.material-icon-theme@4.3.0:URe4ANXBLYHzB6CeGyTN8A==

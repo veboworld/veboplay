@@ -1,0 +1,33 @@
+const http = require("http");
+const fs = require("fs");
+
+const HOST = 'localhost';
+const PORT = 5005;
+
+//const server = http.createServer(require('./api'));
+
+//server.listen(PORT, HOST, () => {
+//    console.log(`Server is running on http://${HOST}:${PORT}`);
+//});
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://vbpl:55365542@veboplay.2q7lv.mongodb.net/vbpl?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useUnifiedTopology: true, useNewUrlParser: true });
+
+client.connect()
+  .then(() => {
+    console.log('MongoDB Connected!');
+
+    client.db("vbpl").collection("items").find({}).toArray((err, results) => {
+      console.log(results);
+    });
+
+    client.close();
+  })
+  .catch(err => { err => console.log(err) })
+
+  //const collection = client.db("vbpl").collection("items").find({}).toArray((err, results) => {
+
+  // perform actions on the collection object
+
+ // client.close();

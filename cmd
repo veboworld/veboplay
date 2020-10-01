@@ -1,0 +1,1 @@
+gitpod /workspace/veboplay $ node_modules/.bin/lerna  add @veboplay/ui --scope=@veboplay/pwa
