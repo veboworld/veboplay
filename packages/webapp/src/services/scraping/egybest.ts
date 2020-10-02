@@ -15,14 +15,14 @@ export default (req: any, res: any) => {
 
     res.setHeader('Content-Type', 'application/json');
 
-    const params = url.parse(req.url, true).query;
-    const key = params['q'];
+    const params: Array<T> = url.parse(req.url, true).query;
+    const key: string = params['q'];
 
     fetch('https://egy.best/autoComplete.php?q=' + key)
         .then(res => res.json())
         .then((res: StringArray) => {
             let results: StringArray;
-            results = res[key: any].map(item => {
+            results = res[key].map(item => {
                 return {
                     id: item.i,
                     title: item.u.match('^(movie|series)/(.*)$')[1] == 'series' ? item.t : item.t.match('^(?<title>.*)\\s{0,2}\\([\\s]{0,3}(?<year>(19|20)\\d{2})[\\s]{0,3}\\)$')[1],
