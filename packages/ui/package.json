@@ -53,6 +53,7 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
     "find-unused-sass-variables": "^2.0.0",
+    "hugo-bin": "^0.63.1",
     "jest": "^26.4.2",
     "lockfile-lint": "^4.3.7",
     "nodemon": "^2.0.4",
