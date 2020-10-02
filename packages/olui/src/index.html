@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="manifest" href="manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Vebo">
+        <meta name="apple-mobile-web-app-title" content="Vebo">
+        <meta name="msapplication-starturl" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Veboplay TV</title>
+        <link href="https://unpkg.com/tailwindcss/dist/base.min.css" rel="stylesheet" type="text/css" />
+        <link href="app.css" rel="stylesheet" type="text/css" />
+
+        <script src="https://unpkg.com/eruda"></script>
+        <script>eruda.init();</script>
+
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <!-- Vue App -->
+        <div id="app" :dir="getLocale().diraction" dir="rtl">
+
+        <div class="vb-app">
+            <div class="vb-sidebar">
+                <div class="flex h-full" style="display: flex; height: 100%;">
+                    <div class="m-auto w-full mr-2 text-white" style="margin: auto; width: 100%; margin-right: 20px; color: white;">
+                        <a href="#">افلام</a>
+                    </div>
+                </div>
+            </div>
+            <div id="vb-cached-container" class="vb-cached-container"></div>
+            <div id="vb-container" class="vb-container">
+                <div class="vb-nav" style="text-align: center;">
+                    <div class="inline mr-4 mt-5" id="hum" v-on:click="toggleSidebar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#000" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="15" y1="4" x2="30" y2="4"/>
+                            <line x1="9" y1="14" x2="30" y2="14"/>
+                            <line x1="3" y1="24" x2="30" y2="24"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-center w-full h-12 mt-2">
+                        <img src="https://raw.githubusercontent.com/veboworld/veboplay/main/docs/images/logo-350.png" class="h-full" style="height: 60px; background: red;">
+                    </div>
+                </div>
+                <section class="text-gray-900 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                        <h2 class="text-2xl my-4 border-b border-gray-600">عنوان.</h2>
+                        <div class="pg-posts flex flex-wrap -m-4" stylye="flex-flow row wrap;">
+                            <p>محتوة هنا.</p>
+                            <p>Content here. {{ name }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- end of vue -->
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

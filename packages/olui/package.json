@@ -1,0 +1,64 @@
+{
+  "name": "@veboplay/ui",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "fwdmo <mv.bkup.1@gmail.com>",
+  "homepage": "https://github.com/veboworld/veboplay#readme",
+  "license": "MIT",
+  "main": "src/ui.js",
+  "directories": {
+    "src": "src",
+    "test": "tests"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veboworld/veboplay.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm-run-all clean build:*",
+    "build:css": "sass src/scss/veboplay.scss dist/css/veboplay.css",
+    "build-dev": "rimraf dist && webpack -d --mode development"
+  },
+  "bugs": {
+    "url": "https://github.com/veboworld/veboplay/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@hot-loader/react-dom": "^17.0.0-rc.2",
+    "autoprefixer": "^10.0.1",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.4.2",
+    "lodash-webpack-plugin": "^0.11.5",
+    "mini-css-extract-plugin": "^0.11.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^4.0.2",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "moment": "^2.29.0"
+  }
+}

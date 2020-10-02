@@ -1,0 +1,109 @@
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+/*
+@font-face {
+    font-family: 'Montserrat-Arabic';
+    src: url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Thin.eot');
+    src: url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Thin.woff2') format('woff2'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Thin.woff') format('woff'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Thin.ttf') format('truetype'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Thin.svg#Montserrat-Arabic-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Arabic';
+    src: url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-ExtraLight.eot');
+    src: url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-ExtraLight.woff2') format('woff2'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-ExtraLight.woff') format('woff'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-ExtraLight.ttf') format('truetype'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-ExtraLight.svg#Montserrat-Arabic-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Arabic';
+    src: url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Light.eot');
+    src: url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Light.woff2') format('woff2'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Light.woff') format('woff'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Light.ttf') format('truetype'),
+        url('/fonts/montserrat-arabic/subset-Montserrat-Arabic-Light.svg#Montserrat-Arabic-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+
+html,
+body {
+  font-family: 'Montserrat', 'Montserrat-Arabic', sans-serif;
+}
+
+.vb-app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.vb-sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: #c62128;
+  background-image: linear-gradient(147deg, #FF6633 0%, #FF0E83 100%);
+  background-image: linear-gradient(147deg, #2B24E7 0%, #691D91 100%);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+#hum {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.vb-container, .vb-cached-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  overflow-x: auto;
+  z-index: 2;
+  transform: none;
+  transition: .3s cubic-bezier(.3, 0, 0, 1.5);
+}
+
+.vb-container.scaled,
+.vb-cached-container.scaled {
+  border-radius: 20px;
+  transform: scale(0.85) translateX(-75%) rotate(1.7deg);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .45);
+}
+
+.vb-cached-container.scaled {
+  opacity: .5;
+  height: 92%;
+  top: 4%;
+  transform: scale(0.85) translateX(-70%) rotate(1.7deg) !important;
+}
+
+.vb-cached-container.scaled {
+  display: block;
+}
+
+.vb-cached-container:after {
+  content: '\200b';
+}

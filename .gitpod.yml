@@ -2,7 +2,7 @@ image:
   file: Dockerfile.gitpod
   context: .
 tasks:
-  - init: yarn install && yarn run build
+  - init: lerna bootstrap
 ports:
     - port: 3000
       onOpen: ignore
