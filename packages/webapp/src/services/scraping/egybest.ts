@@ -6,7 +6,7 @@ interface StringArray {
 }
 let res;
 
-export default (req, res) => {
+export default (req: any, res: any) => {
     // Set CORS headers.
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Request-Method', '*');
@@ -22,7 +22,7 @@ export default (req, res) => {
         .then(res => res.json())
         .then((res: StringArray) => {
             let results: StringArray;
-            results = res[key].map(item => {
+            results = res[key: any].map(item => {
                 return {
                     id: item.i,
                     title: item.u.match('^(movie|series)/(.*)$')[1] == 'series' ? item.t : item.t.match('^(?<title>.*)\\s{0,2}\\([\\s]{0,3}(?<year>(19|20)\\d{2})[\\s]{0,3}\\)$')[1],
