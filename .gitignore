@@ -62,11 +62,11 @@ typings/
 .cache
 .parcel-cache
 
-# Next.js build output
-.next
+# Logs
+logs
+*.log
 
-# Nuxt.js build / generate output
-.nuxt
+# build directory
 dist
 
 # Gatsby files
