@@ -13,7 +13,15 @@
     "purepare": "node scripts/post-install.js",
     "postversion": "node scripts/post-release-merge.js",
     "clean": "lerna clean",
-    "logo": "node scripts/logo-gen.js"
+    "logo": "node scripts/logo-gen.js",
+    "docs": "npm-run-all docs-build docs-lint",
+    "docs-build": "hugo --cleanDestinationDir",
+    "docs-compile": "npm run docs-build",
+    "docs-linkinator": "linkinator _gh_pages --recurse --silent --skip \"^(?!http://localhost)\"",
+    "docs-vnu": "node build/vnu-jar.js",
+    "docs-lint": "npm-run-all --parallel docs-vnu docs-linkinator",
+    "docs-serve": "hugo server --port 9001 --disableFastRender",
+    "docs-serve-only": "sirv _gh_pages --port 9001"
   },
   "engines": {
     "node": ">= 11.7.1",
