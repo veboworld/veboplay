@@ -34,7 +34,7 @@
     "js:lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js:minify": "npm-run-all --parallel js-minify-*",
     "html": "cp src/index.html dist/ && cp -r src/fonts dist/",
-    "dist": "npm-run-all dist:clean css html",
+    "dist": "npm-run-all dist:clean css js html",
     "dist:clean": "rimraf dist",
     "lint": "npm-run-all --parallel js:lint css:lint",
     "build-dev": "rimraf dist && webpack -d --mode development"
