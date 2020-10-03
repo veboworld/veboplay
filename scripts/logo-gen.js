@@ -19,9 +19,9 @@ for (let newWidth of process.argv.slice(2)) {
   aspectRatio = ( oldWidth / oldHeight );
   newHeight = ( newWidth / aspectRatio );
 
-  svg2img(__dirname+'/../images/logo.svg', {width: newWidth, height: newHeight, preserveAspectRatio:true}, (error, buffer) => {
-    fs.writeFileSync(`docs/images/logo-${newWidth}.png`, buffer);
+  svg2img(__dirname+'/../art/images/logo.svg', {width: newWidth, height: newHeight, preserveAspectRatio:true}, (error, buffer) => {
+    fs.writeFileSync(`art/logos/logo-${newWidth}.png`, buffer);
   });
 
-  console.log(`Your image is here docs/images/logo-${newWidth}.png`);
+  console.log(`Your image is here art/logos/logo-${newWidth}.png`);
 }
