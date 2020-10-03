@@ -1,8 +1,6 @@
 /*!
- * Veboplay UI v5.0.0-alpha2 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Veboplay UI v1.0.0-dev (https://vebo.co/)
+ * Licensed under MIT (https://github.com/LICENSE)
  */
 
 // scss-docs-start import-stack
@@ -13,8 +11,8 @@
 @import "utilities";
 
 // Layout & components
-@import "reset";
 @import "root";
+@import "reset";
 @import "type";
 
 // Helpers
