@@ -4,5 +4,8 @@
         "focus",
         "hover",
         "nth-child"
-    ]
+    ],
+    "editor.formatOnPaste": true ,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true
 }
