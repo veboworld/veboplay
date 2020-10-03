@@ -15,7 +15,7 @@ export default (req: any, res: any) => {
 
     res.setHeader('Content-Type', 'application/json');
 
-    const params: Array<T> = url.parse(req.url, true).query;
+    const params = url.parse(req.url, true).query;
     const key: string = params['q'];
 
     fetch('https://egy.best/autoComplete.php?q=' + key)
