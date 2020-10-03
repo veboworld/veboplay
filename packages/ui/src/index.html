@@ -1,63 +1,146 @@
 <!DOCTYPE html>
 <html dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="manifest" href="manifest.json">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="Vebo">
-        <meta name="apple-mobile-web-app-title" content="Vebo">
-        <meta name="msapplication-starturl" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Veboplay TV</title>
-        <link href="/css/veboplay.css" rel="stylesheet" type="text/css" />
 
-        <script src="https://unpkg.com/eruda"></script>
-        <script>eruda.init();</script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="manifest" href="manifest.json">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Vebo">
+	<meta name="apple-mobile-web-app-title" content="Vebo">
+	<meta name="msapplication-starturl" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Veboplay TV</title>
+	<link href="/css/veboplay.css" rel="stylesheet" type="text/css" />
 
-        <script src="https://unpkg.com/vue"></script>
-    </head>
-    <body>
-        <!-- Vue App -->
-        <div id="app" :dir="getLocale().diraction" dir="rtl">
+	<script src="https://unpkg.com/eruda"></script>
+	<script>
+		eruda.init();
+	</script>
 
-        <div class="vb-app">
-            <div class="vb-sidebar">
-                <div class="flex h-full" style="display: flex; height: 100%;">
-                    <div class="m-auto w-full mr-2 text-white" style="margin: auto; width: 100%; margin-right: 20px; color: white;">
-                        <a href="#">افلام</a>
-                    </div>
-                </div>
-            </div>
-            <div id="vb-cached-container" class="vb-cached-container"></div>
-            <div id="vb-container" class="vb-container">
-                <div class="vb-nav" style="text-align: center;">
-                    <div class="inline mr-4 mt-5" id="hum" v-on:click="toggleSidebar()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#000" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="15" y1="4" x2="30" y2="4"/>
-                            <line x1="9" y1="14" x2="30" y2="14"/>
-                            <line x1="3" y1="24" x2="30" y2="24"/>
-                        </svg>
-                    </div>
-                    <div class="flex justify-center w-full h-12 mt-2">
-                        <img src="https://raw.githubusercontent.com/veboworld/veboplay/main/docs/images/logo-350.png" class="h-full" style="height: 60px; background: red;">
-                    </div>
-                </div>
-                <section class="text-gray-900 body-font">
-                    <div class="container px-5 py-24 mx-auto">
-                        <h2 class="text-2xl my-4 border-b border-gray-600">عنوان.</h2>
-                        <div class="pg-posts flex flex-wrap -m-4" stylye="flex-flow row wrap;">
-                            <p>محتوة هنا.</p>
-                            <p>Content here. {{ name }}</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+	<script src="https://unpkg.com/vue"></script>
+</head>
 
-        <!-- end of vue -->
-        </div>
-        <script src="app.js"></script>
-    </body>
+<body>
+	<!-- Vue App -->
+	<div id="app" :dir="getLocale().diraction" dir="rtl">
+
+		<div class="vb-app">
+			<div class="vb-sidebar">
+				<div class="flex h-full" style="display: flex; height: 100%;">
+					<div class="m-auto w-full mr-2 text-white"
+						style="margin: auto; width: 100%; margin-right: 20px; color: white;">
+						<a href="#">افلام</a>
+					</div>
+				</div>
+			</div>
+			<div id="vb-cached-container" class="vb-cached-container"></div>
+			<div id="vb-container" class="vb-container">
+				<div class="vb-nav" style="text-align: center;">
+					<div class="inline mr-4 mt-5" id="hum" v-on:click="toggleSidebar()">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#000"
+							stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="15" y1="4" x2="30" y2="4" />
+							<line x1="9" y1="14" x2="30" y2="14" />
+							<line x1="3" y1="24" x2="30" y2="24" />
+						</svg>
+					</div>
+					<div class="flex justify-center w-full h-12 mt-2">
+						<img src="https://raw.githubusercontent.com/veboworld/veboplay/main/docs/images/logo-350.png" class="h-full" style="height: 60px; background: red;">
+                    </div>
+					</div>
+					<section class="text-gray-900 body-font">
+						<div class="container px-5 py-24 mx-auto">
+							<h2 class="text-2xl my-4 border-b border-gray-600">عنوان.</h2>
+							<div class="pg-posts flex flex-wrap -m-4" stylye="flex-flow row wrap;">
+								<p>محتوة هنا.</p>
+								<p>Content here. {{ name }}</p>
+
+
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+									egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+									ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+									Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+									Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+									fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+									lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent
+									dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna
+									eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+									facilisis luctus, metus</p>
+
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+									egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+									ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+									Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+									Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+									fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+									lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent
+									dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna
+									eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+									facilisis luctus, metus</p>
+
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+									egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+									ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+									Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+									Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+									fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+									lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent
+									dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna
+									eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+									facilisis luctus, metus</p>
+								<h1>HTML Ipsum Presents</h1>
+
+								<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada
+									fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+									tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+									<em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit
+									amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
+									<code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget
+									tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a
+										href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+								<h2>Header Level 2</h2>
+
+								<ol>
+									<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+									<li>Aliquam tincidunt mauris eu risus.</li>
+								</ol>
+
+								<blockquote>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in
+										mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur
+										massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus,
+										at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+								</blockquote>
+
+								<h3>Header Level 3</h3>
+
+								<ul>
+									<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+									<li>Aliquam tincidunt mauris eu risus.</li>
+								</ul>
+
+								<pre><code>
+								#header h1 a {
+								  display: block;
+								  width: 300px;
+								  height: 80px;
+								}
+								</code></pre>
+
+
+								<!-- end of c -->
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<!-- end of vue -->
+		</div>
+		<script src="app.js"></script>
+</body>
+
 </html>

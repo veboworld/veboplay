@@ -10,10 +10,23 @@
 @import "mixins";
 @import "utilities";
 
-// Layout & components
+// Layout
 @import "root";
 @import "reset";
 @import "type";
 
+// Components
+// @import "components";
+// Modules
+@import "modules";
+
 // Helpers
 @import "helpers";
+
+/*
+@include media-breakpoint-down(xs) {
+  .custom-class {
+    display: block;
+  }
+}
+*/
