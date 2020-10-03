@@ -7,5 +7,7 @@
     ],
     "editor.formatOnPaste": true ,
     "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "files.autoSave": "afterDelay",
+    "files.trimFinalNewlines": true
 }
