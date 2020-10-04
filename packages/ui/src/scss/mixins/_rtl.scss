@@ -1,0 +1,17 @@
+@mixin rtl {
+  .vb-app--is-rtl {
+      @content;
+  }
+}
+
+@mixin ltr {
+  .vb-app--is-ltr {
+      @content;
+  }
+}
+
+@mixin theme ($component)
+  .theme--light.#{$component}
+    @content($material-light)
+  .theme--dark.#{$component}
+    @content($material-dark)

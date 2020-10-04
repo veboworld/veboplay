@@ -33,9 +33,11 @@
     "js:compile-plugins": "node build/build-plugins.js",
     "js:lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js:minify": "npm-run-all --parallel js-minify-*",
-    "html": "cp src/index.html dist/ && cp -r src/fonts dist/",
+    "html": "cp src/index.html dist/ && cp -r fonts dist/ && cp -r ../../art/logos/ dist/images",
     "dist": "npm-run-all dist:clean css js html",
     "dist:clean": "rimraf dist",
+    "watch": "npm-run-all --parallel watch:css",
+    "watch:css": "nodemon --watch src/scss/ --ext scss --exec \"npm-run-all css:compile css:prefix\"",
     "lint": "npm-run-all --parallel js:lint css:lint",
     "build-dev": "rimraf dist && webpack -d --mode development"
   },
