@@ -24,6 +24,12 @@
   }
 }
 
+@include theme(ddd) {
+  .#{$variable-prefix}sidebar {
+    right: 0;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .#{$variable-prefix}app .#{$variable-prefix}sidebar {
     width: 100px;
