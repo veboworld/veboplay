@@ -18,15 +18,12 @@
   }
 }
 
-@include rtl() {
-  .#{$variable-prefix}sidebar {
-    right: 0;
-  }
-}
+@include dark(vb-sidebar) {
+  background: #000000;
+  color: #c00000;
 
-@include theme(ddd) {
-  .#{$variable-prefix}sidebar {
-    right: 0;
+  &.scale {
+    padding: 2px;
   }
 }
 
@@ -34,4 +31,10 @@
   .#{$variable-prefix}app .#{$variable-prefix}sidebar {
     width: 100px;
   }
+
+@include rtl() {
+  .#{$variable-prefix}sidebar {
+    right: 0;
+  }
+}
 }
