@@ -5,10 +5,11 @@ tasks:
   - init: git pull
     command: echo "Initializing ..."
   - name: Bootstrap lerna
-    command: > lerna bootstrap
+    command: >
+      lerna bootstrap
 ports:
-    - port: 3000
-      onOpen: ignore
+  - port: 3000
+    onOpen: ignore
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
