@@ -2,7 +2,10 @@ image:
   file: Dockerfile.gitpod
   context: .
 tasks:
-  - init: lerna bootstrap
+  - init: git pull
+    command: echo "Initializing ..."
+  - name: Bootstrap lerna
+    command: > lerna bootstrap
 ports:
     - port: 3000
       onOpen: ignore
