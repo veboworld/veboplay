@@ -1,14 +1,14 @@
 @mixin theme($component) {
-  .theme--light.#{$component} {
-    @content ($material-light);
-  }
-  .theme--dark. #{$component} {
-    @content ($material-dark);
-  }
+    .theme--light.#{$component} {
+        @content ($material-light);
+    }
+    .theme--dark. #{$component} {
+        @content ($material-dark);
+    }
 }
 
 @mixin dark($component) {
-  .theme--dark .#{$component} {
-    @content;
-  }
+    .theme--dark .#{$component} {
+        @content;
+    }
 }

@@ -18,12 +18,6 @@
   }
 }
 
-@include media-breakpoint-up(md) {
-  .vb-container {
-    width: calc(100% - 100px);
-  }
-}
-
 @include media-breakpoint-down(sm) {
   .vb-cached-container {
     width: 100%;
@@ -37,7 +31,7 @@
     transition: 0.3s cubic-bezier(0.3, 0, 0, 1.5);
     right: 0;
   }
-  
+
   .vb-container.scaled,
   .vb-cached-container.scaled {
     border-radius: 20px;
@@ -70,5 +64,11 @@
 
   .vb-cached-container:after {
     content: "\200b";
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .vb-container {
+    width: calc(100% - 100px);
   }
 }

@@ -32,7 +32,7 @@
   <body>
     <!-- Vue App -->
     <div id="app">
-      <div class="vb-app">
+      <div class="vb-app vb-app--is-ltr">
         <div class="vb-sidebar">
           <div class="vb-nav">
             <a href="#">افلام</a>
@@ -40,24 +40,7 @@
         </div>
         <div id="vb-cached-container" class="vb-cached-container"></div>
         <div id="vb-container" class="vb-container">
-          <div class="vb-nav" style="text-align: center">
-            <div class="inline mr-4 mt-5" id="hum" v-on:click="toggleSidebar()">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-                fill="#000"
-                stroke="currentColor"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="15" y1="4" x2="30" y2="4" />
-                <line x1="9" y1="14" x2="30" y2="14" />
-                <line x1="3" y1="24" x2="30" y2="24" />
-              </svg>
-            </div>
+          <div class="vb-nav">
             <div class="flex justify-center w-full h-12 mt-2">
               <img src="/images/logo-350.png" class="h-full" />
             </div>
@@ -65,13 +48,7 @@
           <section class="text-gray-900 body-font">
             <div class="container px-5 py-24 mx-auto">
               <h2 class="text-2xl my-4 border-b border-gray-600">عنوان.</h2>
-              <div
-                class="pg-posts flex flex-wrap -m-4"
-                stylye="flex-flow row wrap;"
-              >
-                <p>محتوة هنا.</p>
-                <p>Content here. {{ name }}</p>
-
+              <div class="pg-posts flex flex-wrap -m-4">
                 <p>
                   Pellentesque habitant morbi tristique senectus et netus et
                   malesuada fames ac turpis egestas. Vestibulum tortor quam,
@@ -164,14 +141,6 @@
                   </li>
                   <li>Aliquam tincidunt mauris eu risus.</li>
                 </ul>
-
-                <pre><code>
-								#header h1 a {
-								  display: block;
-								  width: 300px;
-								  height: 80px;
-								}
-								</code></pre>
 
                 <!-- end of c -->
               </div>

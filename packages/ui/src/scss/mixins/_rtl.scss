@@ -1,11 +1,13 @@
 @mixin rtl {
-  .vb-app--is-rtl {
-    @content;
-  }
+
+    .vb-app--is-rtl {
+        @content;
+    }
 }
 
 @mixin ltr {
-  .vb-app--is-ltr {
-    @content;
-  }
+    
+    .vb-app--is-ltr {
+        @content;
+    }
 }

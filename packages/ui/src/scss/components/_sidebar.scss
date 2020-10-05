@@ -33,9 +33,9 @@
     width: 100px;
   }
 
-@include rtl() {
-  .#{$variable-prefix}sidebar {
-    right: 0;
+  @include rtl() {
+    .#{$variable-prefix}sidebar {
+      right: 0;
+    }
   }
-}
 }
