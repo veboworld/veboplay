@@ -2,10 +2,11 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #c62128;
-  background-image: linear-gradient(147deg, #ff6633 0%, #ff0e83 100%);
+  //background-color: #c62128;
+  //background-image: linear-gradient(147deg, #ff6633 0%, #ff0e83 100%);
   //background-image: linear-gradient(147deg, #2b24e7 0%, #691d91 100%);
   //background-image: linear-gradient(180deg, #FF4746 0%, #A3003F 100%);
+  background: #2b50ed;
   top: 0;
   left: 0;
   position: absolute;
@@ -30,7 +31,7 @@
 
 @include media-breakpoint-up(lg) {
   .#{$variable-prefix}app .#{$variable-prefix}sidebar {
-    width: 100px;
+    width: 70px;
   }
 
   @include rtl() {
